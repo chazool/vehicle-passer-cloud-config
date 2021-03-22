@@ -4,6 +4,7 @@ spring:
     password: 1234
     url: jdbc:mysql://localhost:3306/vehiclepasser_transaction_1?createDatabaseIfNotExist=true
     driver-class-name: com.mysql.jdbc.Driver
+    initialization-mode: always
   jpa:
     hibernate:
       naming:
