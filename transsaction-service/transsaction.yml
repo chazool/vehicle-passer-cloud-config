@@ -5,6 +5,7 @@ spring:
     url: jdbc:mysql://localhost:3306/vehiclepasser_transaction?createDatabaseIfNotExist=true
     driver-class-name: com.mysql.jdbc.Driver
     initialization-mode: always
+    continue-on-error: true
   jpa:
     hibernate:
       naming:
