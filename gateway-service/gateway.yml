@@ -1,0 +1,33 @@
+server:
+  port: 8989
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: driver
+          uri: lb://driver
+          predicates:
+            - Path=/services/**
+        - id: driver
+          uri: lb://email
+          predicates:
+            - Path=/services/**
+        - id: payment
+          uri: lb://payment
+          predicates:
+            - Path=/services/**
+        - id: transsaction
+          uri: lb://transsaction
+          predicates:
+            - Path=/services/**
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
