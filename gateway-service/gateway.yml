@@ -9,7 +9,7 @@ spring:
           uri: lb://driver
           predicates:
             - Path=/services/**
-        - id: driver
+        - id: email
           uri: lb://email
           predicates:
             - Path=/services/**
